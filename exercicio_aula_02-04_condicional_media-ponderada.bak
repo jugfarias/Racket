@@ -1,0 +1,61 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname exercicio_aula_02-04_condicional_media-ponderada) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+(require 2htdp/image)
+
+;; calcular a nota final de um aluno considerando que é uma média ponderada, onde o primeiro tri tem peso 1, o segundo tri rem pelo 2
+;; e o terceiro tri tem peso 3. mostras o resultado dentro de uma esctrela amarela, se a média for maior ou igual a 7, senão, mostrar
+;; em um círculo vermelho.
+
+;; estrela: numero -> imagem
+;; Obj: dados um número, devolvê-lo sobrepondo uma estrela amarela
+;; Exemplos:
+;; (estrela 10) = estrela amarela com 10 escrito
+;; (estrela 8.5) = estrela amarela com 8.5 escrito
+
+(define (estrela num)
+  (overlay
+   (text
+    (number->string num)
+    12
+    "black"
+    )
+   (star 40 "solid" "yellow")
+
+   )
+  
+)
+
+;; estrela: numero -> imagem
+;; Obj: dados um número, devolvê-lo sobrepondo um círculo vermelho
+;; Exemplos:
+;; (circulo 5) = círculo vermelho com 5 escrito
+;; (circulo 3.7) = círculo vermelho com 3.7 escrito
+
+(define (circulo num)
+  (overlay
+   (text
+    (number->string num)
+    12
+    "black"
+    )
+   (circle 25 "solid" "red")
+
+   )
+  
+)
+
+;; mostra-nota: numero numero numero -> imagem
+;; Obj: dados três números, devolver a média ponderada em imagens
+;; Exemplos:
+;; (mostra-nota 0 0 0) = círculo vermelho com 0 escrito
+;; (mostra-nota 10 10 10) = estrela amarela com 10 escrito
+
+(define (mostra-nota n1 n2 n3)
+  (define media (/ (+ n1 (* n2 2) (* n3 3)) 6))
+  
+  (cond
+    [(> media 7) (estrela media)]
+    [else (circulo media)]
+  )
+)

@@ -1,0 +1,23 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname exemplo_aula_02-04_condicional) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+;; f: numero -> numero
+;; Obj: dado um numero, calcular multiplicações diferentes caso seja igual a 1, maior que 2 ou outro
+;; Exemplos:
+;; (f 1) = 2
+;; (f 2) = 0
+;; (f 3) = 4
+
+(define (f n)
+  (cond
+    [(= n 1) (* 2 n)]
+    [(> n 2) (* 2 (- n 1))]
+    [else (* 2 (- n 2))]
+   )
+
+  )
+
+;; Testes:
+(check-expect (f 1) 2)
+(check-expect (f 2) 0)
+(check-expect (f 3) 4)

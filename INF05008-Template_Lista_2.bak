@@ -1,0 +1,88 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname INF05008-Template_Lista_2) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname lista2-template) (read-case-sensitive #t) (teachpacks ((lib "image.rkt" "teachpack" "2htdp") (lib "testing.rkt" "teachpack" "htdp"))) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ((lib "image.rkt" "teachpack" "2htdp") (lib "testing.rkt" "teachpack" "htdp")) #f)))
+;; Nome: Juliana Guimarães de Farias
+
+;; ==============================================================
+;; 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+;; ==============================================================
+;; calcula-prop: ..... -> .....
+;; Obj: ....
+;; Exemplos:
+;;   (calcula-prop ....) = ...
+;;   (calcula-prop ....) = ...
+
+(define (calcula-prop ...)
+        ....)
+
+;; Testes: 
+    (check-expect (calcula-prop ....) ....)
+    (check-expect (calcula-prop ....) ....)
+
+;; ==============================================================
+;; 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+;; ==============================================================
+;; calcula-aprovados: .... -> ....
+;; Obj:  ....
+;; Exemplos:
+;;      ....
+;;      ....
+
+(define (calcula-aprovados ....)
+        ....)
+
+;; Testes: 
+    (check-expect (calcula-aprovados ....) ....)
+    (check-expect (calcula-aprovados ....) ....)
+
+;; ==============================================================
+;; 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+;; ==============================================================
+;; ....: .... -> ....
+;; Obj: ....
+;; Exemplos:
+;;    (mostra-proporcao ....) = "Na turma Y foram aprovados 90% dos alunos"
+;;    (mostra-proporcao ...) = ....
+
+(define (mostra-proporcao ....)
+       ....)
+
+;; Testes: 
+     (check-expect (mostra-proporcao ....)  "Na turma Y foram aprovados 90% dos alunos")
+     (check-expect (mostra-proporcao ....) .... )
+
+;; ==============================================================
+;; 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+;; ==============================================================
+;; ....: .... -> ....
+;; Obj:....
+;; Exemplos:
+;;    (desenha-barra ....) = (rectangle 30 30 "solid" "green")
+;;    (desenha-barra ....) = ....
+
+(define (....)
+         ....)
+;; Testes:
+      (check-expect ....  (rectangle 30 30 "solid" "green"))
+      (check-expect .... ....)
+
+;; ==============================================================
+;; 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5  
+;; ==============================================================
+;; ....: .... -> ....
+;; Obj: ....
+;; Exemplos:
+;;    (mostra-estatisticas "Y" 27 3) gera uma imagem com um diagrama de barras....
+;;    (mostra-estatisticas ....) ....
+
+(define (....)
+        ....)
+
+;; Testes: (nesta questão deixar apenas chamadas ao invés de testes)
+     (mostra-estatisticas "Y" 27 3)
+     (mostra-estatisticas .....)
+     (mostra-estatisticas .....)
+
