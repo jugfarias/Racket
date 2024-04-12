@@ -1,0 +1,28 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname exercicio_aula_11-04_tipos-mistos) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+(define-struct Produto
+  (nome  ;; string, nome do produto
+   cod   ;; numero, código do produto
+   preço ;; numero, preço do produto
+   quant ;; QuantVenc, quantidade do produto em termos do prazo de validade caso perecível
+   )
+  
+  )
+
+;; QuantVenc:
+;; =========
+;; Um elemento do conjunto QuantVenc é:
+;;    i) um Número, ou
+;;   ii) um VencPerecivel
+
+(define-struct vencPerecivel
+  atual ;; numero, quantidade de itens que vencem no mês atual
+  prox  ;; numero, quantidade de itens que vencem no próximo mês
+  seg   ;; numero, quantidade de itens que vencem no mês seguinte
+ )
+
+(define V-AZEITE (make-vencPerecivel 50 330 500))
+
+(make-Produto CADERNO ("caderno" 123 19.99 54))
+(make-Produto AZEITE ("azeite" 456 31.90 V-AZEITE))
