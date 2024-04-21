@@ -5,7 +5,7 @@
 ;; 1. a lista vazia empty ou
 ;; 2. (cons n ldn), onde
 ;;    n: numero
-;;    ldn: lista-de-numeros
+;;    ldb: lista-de-numeros
 
 (define lista-de-numeros (cons 1 (cons 2 (cons 3 empty))))
 
