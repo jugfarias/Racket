@@ -22,6 +22,7 @@
   )
 )
 
+
 ;; Testes
 (check-expect (soma-3 (cons 1 (cons 1 (cons 1 empty)))) 3)
 (check-expect (soma-3 lista-3-numeros) 6)
