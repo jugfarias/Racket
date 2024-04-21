@@ -8,7 +8,7 @@
 
 (define lista-3-numeros (cons 1 (cons 2 (cons 3 empty))))
 
-;; soma-3: lista -> numero
+;; soma-3: lista-3-numeros -> numero
 ;; Obj: dado uma lista de três números, devolver a soma dos números
 ;; Exemplos:
 ;; (soma-3 (cons 1 (cons 1 (cons 1 empty)))) = 3
